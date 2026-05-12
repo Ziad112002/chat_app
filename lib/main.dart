@@ -1,6 +1,7 @@
 
+import 'package:chat_app/core/utils/theme/app_theme.dart';
 import 'package:chat_app/pages/chat_page.dart';
-import 'package:chat_app/pages/login_page.dart';
+import 'package:chat_app/features/auth/presentation/login/view/login_page.dart';
 import 'package:chat_app/pages/signup_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,9 @@ class _ChatAppState extends State<ChatApp> {
         SignupPage.id:(context)=>   const SignupPage(),
         ChatPage.id:(context)=>  ChatPage()
       },
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
       initialRoute:LoginPage.id,
     );

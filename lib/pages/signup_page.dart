@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../helper/show_snack_bar.dart';
-import '../widgets/custom_button.dart';
-import '../widgets/custom_textfield.dart';
+import '../features/auth/presentation/widgets/custom_button.dart';
+import '../features/auth/presentation/widgets/custom_textfield.dart';
 import 'chat_page.dart';
 // ignore: must_be_immutable
 class SignupPage extends StatefulWidget {
@@ -74,14 +74,14 @@ class _SignupPageState extends State<SignupPage> {
                   onChanged:(data){
                     email=data;
                   },
-                    hintText: 'Email',
+                   label: '',
                   ),
                   const SizedBox(height: 10,),
                   CustomTextFormField(
                     onChanged:(data){
                       password=data;
                     },
-                     hintText: 'Password',
+                     label: '',
                       ),
                   const SizedBox(height: 15,),
                    CustomButton(

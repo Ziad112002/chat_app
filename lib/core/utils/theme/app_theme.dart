@@ -8,9 +8,13 @@ abstract final class AppTheme {
       scaffoldBackgroundColor: AppColor.white,
       primaryColor: AppColor.darkGreen,
       brightness: Brightness.light,
+      useMaterial3: true,
       colorScheme: ColorScheme.fromSeed(
           seedColor: AppColor.darkGreen,
-          brightness: Brightness.light),
+          secondary: AppColor.darkBlack,
+        brightness: Brightness.light,
+        surface: AppColor.white,
+      ),
       textTheme: TextTheme(
         headlineLarge: AppTextStyle.heading2.copyWith(color: Colors.black),
         headlineMedium: AppTextStyle.heading3.copyWith(color: Colors.black),
@@ -28,9 +32,10 @@ abstract final class AppTheme {
 
 
       ),
-      elevatedButtonTheme: ElevatedButtonThemeData(
+    elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-              backgroundColor: AppColor.darkGreen,
+              backgroundColor: AppColor.lightGrey,
+
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16)))),
     bottomNavigationBarTheme:  BottomNavigationBarThemeData(
@@ -46,9 +51,12 @@ abstract final class AppTheme {
     scaffoldBackgroundColor: AppColor.softBlack,
     primaryColor: AppColor.darkGreen,
     brightness: Brightness.dark,
+    useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(
-        seedColor: AppColor.darkGreen,
-        brightness: Brightness.dark
+      seedColor:AppColor.darkGreen,
+      secondary: AppColor.white,
+        brightness: Brightness.dark,
+      surface: AppColor.darkBlack,
     ),
     textTheme: TextTheme(
       headlineLarge: AppTextStyle.heading2.copyWith(color: Colors.white),
@@ -67,10 +75,9 @@ abstract final class AppTheme {
 
 
     ),
-
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-            backgroundColor: AppColor.darkGreen,
+            backgroundColor: AppColor.lightBlack,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16)))),
     bottomNavigationBarTheme:  BottomNavigationBarThemeData(

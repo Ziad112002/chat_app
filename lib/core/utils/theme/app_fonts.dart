@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FontConstants {
-  FontConstants._();
+class FontNames {
+  FontNames._();
   static const String carosFont = "Caros";
   static const String circularStdFont = "Circular Std";
 }
