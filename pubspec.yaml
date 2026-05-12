@@ -1,0 +1,51 @@
+name: chat_app
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+
+  cupertino_icons: ^1.0.6
+  firebase_core: ^2.30.1
+  firebase_auth: ^4.19.4
+  modal_progress_hud_nsn: ^0.5.1
+  cloud_firestore: ^4.17.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+
+
+  fonts:
+     - family: Pacifico
+       fonts:
+         - asset: assets/fonts/Pacifico-Regular.ttf
+
+     - family: Circular Std
+       fonts:
+         - asset: assets/fonts/circular-std-medium-500.ttf
+         - asset: assets/fonts/shellypalmer-circular-std-book.ttf
+     - family: Circular Std
+       fonts:
+        - asset: assets/fonts/cretype  Caros Bold.otf
+        - asset: assets/fonts/cretype  Caros ExtraBold.otf
+        - asset: assets/fonts/cretype  Caros Medium.otf
+        - asset: assets/fonts/cretype  Caros Light.otf
