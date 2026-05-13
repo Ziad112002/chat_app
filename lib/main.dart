@@ -1,8 +1,8 @@
 
 import 'package:chat_app/core/utils/theme/app_theme.dart';
 import 'package:chat_app/pages/chat_page.dart';
-import 'package:chat_app/features/auth/presentation/login/view/login_page.dart';
-import 'package:chat_app/pages/signup_page.dart';
+import 'package:chat_app/features/auth/presentation/login/view/login_view.dart';
+import 'package:chat_app/features/auth/presentation/register/view/register_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
@@ -25,15 +25,15 @@ class _ChatAppState extends State<ChatApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        LoginPage.id:(context)=>   const LoginPage(),
-        SignupPage.id:(context)=>   const SignupPage(),
+        LoginView.id:(context)=>   const LoginView(),
+        RegisterView.id:(context)=>   const RegisterView(),
         ChatPage.id:(context)=>  ChatPage()
       },
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      initialRoute:LoginPage.id,
+      initialRoute:RegisterView.id,
     );
   }
 }

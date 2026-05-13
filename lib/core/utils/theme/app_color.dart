@@ -11,4 +11,5 @@ import 'package:flutter/material.dart';
   static const lightGreen=Color(0xFF63C6B2);
   static const grey=Color(0xff797C7B);
   static const lightGrey=Color(0xffF3F6F6);
+  static const red=Color(0xffFF2D1B);
 }

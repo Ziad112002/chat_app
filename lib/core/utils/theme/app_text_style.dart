@@ -86,12 +86,7 @@ class AppTextStyle {
       fontWeight: FontWeightManager.medium,
       color: AppColor.lightGreen
   );
-  static const TextStyle chatHintStyle = TextStyle(
-      fontFamily: FontNames.circularStdFont,
-      fontSize: FontSize.s12,
-      fontWeight: FontWeightManager.book,
-    color: AppColor.grey
-  );
+
   static const TextStyle grey16MediumCaros = TextStyle(
       fontFamily: FontNames.carosFont,
       fontSize: FontSize.s16,
@@ -116,6 +111,7 @@ class AppTextStyle {
       fontWeight: FontWeightManager.bold,
     color: AppColor.darkGreen
   );
+
 
 
 

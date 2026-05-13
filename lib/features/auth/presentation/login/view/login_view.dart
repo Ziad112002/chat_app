@@ -1,6 +1,5 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:chat_app/constant.dart';
 import 'package:chat_app/core/utils/app_assets.dart';
 import 'package:chat_app/core/utils/extensions/context_extension.dart';
 import 'package:chat_app/core/utils/extensions/double_extension.dart';
@@ -8,7 +7,6 @@ import 'package:chat_app/core/utils/theme/app_color.dart';
 import 'package:chat_app/core/utils/theme/app_text_style.dart';
 import 'package:chat_app/features/auth/presentation/login/widgets/social_login_button.dart';
 import 'package:chat_app/pages/chat_page.dart';
-import 'package:chat_app/pages/signup_page.dart';
 import 'package:chat_app/features/auth/presentation/widgets/custom_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -17,15 +15,15 @@ import '../../../../../helper/show_snack_bar.dart';
 import '../../widgets/custom_textfield.dart';
 import '../../widgets/highlighted_text.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class LoginView extends StatefulWidget {
+  const LoginView({super.key});
   static String id = 'LoginPage';
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<LoginView> createState() => _LoginViewState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginViewState extends State<LoginView> {
   String? email;
   String? password;
   bool isLoading = false;
@@ -74,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       (context.width * .053).horizontalSpace(),
                       SocialLoginButton(
-                        isLight: Theme.of(context).brightness == Brightness.light,
+                        isLight: context.isLightMode,
                         imagePath: AppAssets.appleIcon,
                       ),
                     ],
