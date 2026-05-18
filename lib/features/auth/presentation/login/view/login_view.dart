@@ -1,11 +1,8 @@
-// ignore_for_file: use_build_context_synchronously
 
-import 'package:chat_app/core/utils/app_assets.dart';
 import 'package:chat_app/core/utils/extensions/context_extension.dart';
 import 'package:chat_app/core/utils/extensions/double_extension.dart';
 import 'package:chat_app/core/utils/theme/app_color.dart';
 import 'package:chat_app/core/utils/theme/app_text_style.dart';
-import 'package:chat_app/features/auth/presentation/login/widgets/social_login_button.dart';
 import 'package:chat_app/pages/chat_page.dart';
 import 'package:chat_app/features/auth/presentation/widgets/custom_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -14,6 +11,8 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../../../../../helper/show_snack_bar.dart';
 import '../../widgets/custom_textfield.dart';
 import '../../widgets/highlighted_text.dart';
+import '../../widgets/or_separator.dart';
+import '../../widgets/social_auth_options.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -60,42 +59,9 @@ class _LoginViewState extends State<LoginView> {
                     style: AppTextStyle.grey14BookCircular,
                   ),
                   (context.height * .037).verticalSpace(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SocialLoginButton(
-                        imagePath: AppAssets.facebookIcon,
-                      ),
-                      (context.width * .053).horizontalSpace(),
-                      SocialLoginButton(
-                        imagePath: AppAssets.googleIcon,
-                      ),
-                      (context.width * .053).horizontalSpace(),
-                      SocialLoginButton(
-                        isLight: context.isLightMode,
-                        imagePath: AppAssets.appleIcon,
-                      ),
-                    ],
-                  ),
+                  SocialAuthOptions(isLight: context.isLightMode,),
                   (context.height * .037).verticalSpace(),
-                  Row(
-                    children: [
-                      Expanded(
-                          child: Divider(
-                        color: AppColor.grey,
-                      )),
-                      (context.width * .042).horizontalSpace(),
-                      Text(
-                        "OR",
-                        style: AppTextStyle.grey14BookCircular,
-                      ),
-                      (context.width * .042).horizontalSpace(),
-                      Expanded(
-                          child: Divider(
-                        color: AppColor.grey,
-                      )),
-                    ],
-                  ),
+                  OrSeparator(),
                   (context.height * .037).verticalSpace(),
                   CustomTextFormField(
                     label: "Your email",
@@ -160,3 +126,5 @@ class _LoginViewState extends State<LoginView> {
         .signInWithEmailAndPassword(email: email!, password: password!);
   }
 }
+
+

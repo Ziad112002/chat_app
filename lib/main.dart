@@ -5,6 +5,7 @@ import 'package:chat_app/features/auth/presentation/login/view/login_view.dart';
 import 'package:chat_app/features/auth/presentation/register/view/register_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'features/auth/presentation/onboarding/view/onboarding_view.dart';
 import 'firebase_options.dart';
 void main()async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,13 +28,14 @@ class _ChatAppState extends State<ChatApp> {
       routes: {
         LoginView.id:(context)=>   const LoginView(),
         RegisterView.id:(context)=>   const RegisterView(),
-        ChatPage.id:(context)=>  ChatPage()
+        ChatPage.id:(context)=>  ChatPage(),
+        OnboardingView.id:(context)=>  OnboardingView()
       },
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
-      initialRoute:RegisterView.id,
+      initialRoute:OnboardingView.id,
     );
   }
 }
